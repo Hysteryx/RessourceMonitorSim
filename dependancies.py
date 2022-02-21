@@ -49,6 +49,13 @@ class Ressources:
         res = int(self.tps) / int(self.intialTps) * 100 
         return 100 - res 
     
+    def getName(self):
+        return self.name 
+    def getTps(self):
+        return self.tps
+    def getInitTps(self):
+        return self.intialTps
+    
     def newTps(self, newVal):
         '''Assigner un nouveau temps'''
         self.tps = newVal

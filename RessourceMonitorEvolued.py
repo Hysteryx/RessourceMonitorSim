@@ -1,14 +1,14 @@
 from random import randint #fonction auto
 from time import sleep as sp #rendre l'affichache mieux 
 from dependancies import Ressources #simulation de la ressource 
-from dependancies import scheduleur #simulation du calcul des ressources
+from dependancies import Scheduleur #simulation du calcul des ressources
 
 def menu_Start():
     """
     Organise et facilite l'utilisation des classes (dans dependancies)
     """
     isRunning = True 
-    sheduleur = scheduleur(5)
+    sheduleur = Scheduleur(5)
     while isRunning:
         terminal_rrp = input("\n>>>")
         if terminal_rrp == 'quit':
