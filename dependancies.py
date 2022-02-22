@@ -50,10 +50,13 @@ class Ressources:
         return 100 - res 
     
     def getName(self):
+        '''Renvoie le nom de self'''
         return self.name 
     def getTps(self):
+        '''Renvoie le temps actuel de self'''
         return self.tps
     def getInitTps(self):
+        '''Renvoie le temps initial de self'''
         return self.intialTps
     
     def newTps(self, newVal):
@@ -117,7 +120,8 @@ class Scheduleur:
                 print(f"[END-PROCESS] - La ressource '{inCalcul.nameP()}' à été calculée avec succès !")
             sl(int(TimePerRessource)/ 100)
 
-    def affiche(self):  #pas de str car l'utilisation poserais pb 
+    def affiche(self):  
+        '''affiche comme son nom l'indique (la méthode str n'est pas utilisée car pas utilisée ici)'''
         for i in range(self.file.taille()):
             prov = self.file.defile()
             print(prov,end=', ')
@@ -126,6 +130,7 @@ class Scheduleur:
             print("Aucun processus en file d'attente ")
 
     def clear(self):
+        '''Retirer tous les éléments de la file'''
         self.file = File()
         print('La file est désormais vide !')
 
